@@ -40,27 +40,25 @@
   <div class="container mt-5" id="abstract">
     <h1>Abstract</h1>
     <p>
-      Deep learning models are notoriously vulnerable to imperceptible perturbations. Most existing research centers on 
-      <strong>adversarial robustness (AR)</strong></a>, 
+      Deep learning models are notoriously vulnerable to imperceptible perturbations. Most existing research centers on adversarial robustness (AR), 
       which evaluates models under worst-case scenarios by examining the existence of deterministic 
-      <em>adversarial examples (AEs)</em></a>. 
-      In contrast, <strong>probabilistic robustness (PR)</strong></a> adopts a statistical perspective, 
+      adversarial examples (AEs). 
+      In contrast, probabilistic robustness (PR) adopts a statistical perspective, 
       measuring the likelihood of encountering AEs under stochastic perturbations.
     </p>
     <p>While PR is widely regarded as a practical complement to AR, training methods specifically designed to improve PR remain underdeveloped compared to 
-      <em>adversarial training (AT)</em></a> for AR. 
+      adversarial training (AT) for AR. 
       Among the few PR-targeted training methods, we identify some key limitations:
     </p>
     <ul class="abstract-points">
       <li><strong><em>i)</em></strong> They use different evaluation metrics, with none of them adopting a comprehensive set;</li>
-      <li><strong><em>ii)</em></strong> While AT may also improve PR (as a “free by-product”), each PR study typically evaluates only a limited subset of AT methods;</li>
+      <li><strong><em>ii)</em></strong> PR study typically evaluates only a limited subset of AT methods;</li>
       <li><strong><em>iii)</em></strong> There is no unified theoretical framework for comparing the generalisability of those training methods.</li>
     </ul>
     <p>
-      Thus, we introduce <strong>PRBench</strong></a>, the first benchmark dedicated to evaluating PR-targeted training methods. 
+      Thus, we introduce PRBench, the first benchmark dedicated to evaluating PR-targeted training methods. 
       PRBench empirically compares most common AT and PR-targeted training methods using a comprehensive set of metrics, including clean accuracy, PR and AR performance, training efficiency, and generalisation error (GE). 
-      We also provide theoretical analysis on the GE of PR performance across training methods. Main findings revealed by PRBench include: AT methods are more versatile than PR-targeted training methods in terms of improving both AR and PR performance, while PR-targeted training methods consistently yield lower GE and higher clean accuracy. Finally, we propose 
-      <strong><em>KL-PGD</em></strong></a>, a simple yet effective method that achieves the highest overall ranking in PRBench.
+      We also provide theoretical analysis on the GE of PR performance across training methods. Main findings revealed by PRBench include: AT methods are more versatile than PR-targeted training methods in terms of improving both AR and PR performance, while PR-targeted training methods consistently yield lower GE and higher clean accuracy.
     </p>
     <div class="text-center">
       <img src="static/src/images/fig_wcr_pr.jpg" alt="Abstract Diagram" class="img-fluid rounded" style="width:80%; height:auto;" />
