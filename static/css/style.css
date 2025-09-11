@@ -29,10 +29,13 @@ body {
   margin: 0 auto;
 } */
 
+
+/* revise */
+
 .container {
     max-width: 1000px;   /* 限制宽度，内容不铺满屏幕 */
-    padding-left: 20px;  /* 左右留白 */
-    padding-right: 20px;
+    padding-left: 15px;  /* 左右留白 */
+    padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -354,6 +357,8 @@ nav {
   font-size: 1rem;
   line-height: 1.6;
 } */
+
+/* revise */
 
 #abstract p, #abstract li {
   margin-bottom: 1rem;
