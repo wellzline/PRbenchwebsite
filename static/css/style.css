@@ -34,8 +34,8 @@ body {
 
 .container {
     max-width: 1000px;   /* 限制宽度，内容不铺满屏幕 */
-    padding-left: 10px;  /* 左右留白 */
-    padding-right: 10px;
+    padding-left: 5px;  /* 左右留白 */
+    padding-right: 5px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -361,11 +361,12 @@ nav {
 /* revise */
 
 #abstract p, #abstract li {
-  margin-bottom: 1rem;
-  font-size: 1.1rem;      /* 字体稍大 */
-  line-height: 1.6;
-  text-align: justify;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: justify;   
+    text-align-last: left; /* 最后一行左对齐 */
 }
+
 
 
 #abstract a {
