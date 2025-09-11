@@ -349,11 +349,18 @@ nav {
 
 
 /* Abstract beautify */
-#abstract p {
+/* #abstract p {
   margin-bottom: 1rem;
   font-size: 1rem;
   line-height: 1.6;
+} */
+
+#abstract p, #abstract li {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;      /* 字体稍大 */
+  line-height: 1.6;
 }
+
 
 #abstract a {
   color: var(--primary-color);
