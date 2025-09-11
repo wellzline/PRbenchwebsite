@@ -524,9 +524,21 @@ nav {
 }
 
 
-/* —— 表格横向滚动 —— */
+
+
+
+/* 表格横向滚动支持 */
 .table-responsive {
   width: 100%;
-  overflow-x: auto;             /* 横向滚动 */
-  -webkit-overflow-scrolling: touch; /* 手机平滑滚动 */
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
+
+/* 表格宽度由内容决定，避免被压缩 */
+#performance-table {
+  width: max-content !important;
+  min-width: 100%;
+  table-layout: auto !important;
+}
+
+
