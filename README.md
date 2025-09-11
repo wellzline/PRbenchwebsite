@@ -59,7 +59,7 @@ https://kenneth939.github.io/Probabilistic-Robustness-for-Free-Revisiting-Its-Tr
     │       │   └── prbench_table9.json
     │       └── images/
     │           ├── fig_wcr_pr.jpg
-    │           ├── pic2.png
+    │           ├── composite_scores.png
     │           ├── pic_loss_strategies.png
     │           └── pic_eval_metrics.png
     └── README.md
