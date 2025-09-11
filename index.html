@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PRBench Leaderboard</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="static/css/style.css" />
+  <!-- DataTables CSS -->
+  <link rel="stylesheet"
+        href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" />
+</head>
+  
+<body>
+  <!-- top guide -->
+  <nav class="navbar">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="navbar-brand" href="#">PRBench</a>
+      <ul class="navbar-nav d-flex flex-row">
+        <li class="nav-item"><a class="nav-link" href="#leaderboards">Leaderboard</a></li>
+        <li class="nav-item"><a class="nav-link" href="paper.html">Paper</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contribute">Contribute</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://github.com/Kenneth939/Probabilistic-Robustness-for-Free-Revisiting-Its-Training-with-Benchmarking.github.io" target="_blank">Code</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="home" class="hero">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="hero__content container">
+      <h1 class="hero__title">PRBench: Probabilistic Robustness Benchmark</h1>
+      <p class="hero__subtitle">
+        A comprehensive benchmark to evaluate probabilistic robustness (PR) and adversarial robustness (AR) across training methods.
+      </p>
+    </div>
+  </header>
+  
+  <!-- Abstract-->
+  <div class="container mt-5" id="abstract">
+    <h1>Abstract</h1>
+    <p>
+      Deep learning models are notoriously vulnerable to imperceptible perturbations. Most existing research centers on 
+      <a href="https://github.com/Kenneth939/Probabilistic-Robustness-for-Free-Revisiting-Its-Training-with-Benchmarking.github.io/blob/main/static/baseinfo/AR.pdf" target="_blank"><strong>adversarial robustness (AR)</strong></a>, 
+      which evaluates models under worst-case scenarios by examining the existence of deterministic 
+      <a href="https://github.com/Kenneth939/Probabilistic-Robustness-for-Free-Revisiting-Its-Training-with-Benchmarking.github.io/blob/main/static/baseinfo/AEs.pdf" target="_blank"><em>adversarial examples (AEs)</em></a>. 
+      In contrast, <a href="https://github.com/Kenneth939/Probabilistic-Robustness-for-Free-Revisiting-Its-Training-with-Benchmarking.github.io/blob/main/static/baseinfo/PR.pdf" target="_blank"><strong>probabilistic robustness (PR)</strong></a> adopts a statistical perspective, 
+      measuring the likelihood of encountering AEs under stochastic perturbations.
+    </p>
+    <p>While PR is widely regarded as a practical complement to AR, training methods specifically designed to improve PR remain underdeveloped compared to 
+      <a href="https://github.com/Kenneth939/Probabilistic-Robustness-for-Free-Revisiting-Its-Training-with-Benchmarking.github.io/blob/main/static/baseinfo/AT.pdf" target="_blank"><em>adversarial training (AT)</em></a> for AR. 
+      Among the few PR-targeted training methods, we identify some key limitations:
+    </p>
+    <ul class="abstract-points">
+      <li><strong><em>i)</em></strong> They use different evaluation metrics, with none of them adopting a comprehensive set;</li>
+      <li><strong><em>ii)</em></strong> While AT may also improve PR (as a “free by-product”), each PR study typically evaluates only a limited subset of AT methods;</li>
+      <li><strong><em>iii)</em></strong> There is no unified theoretical framework for comparing the generalisability of those training methods.</li>
+    </ul>
+    <p>
+      Thus, we introduce <a href="https://github.com/Kenneth939/Probabilistic-Robustness-for-Free-Revisiting-Its-Training-with-Benchmarking.github.io/blob/main/static/baseinfo/PRBench.pdf" target="_blank"><strong>PRBench</strong></a>, the first benchmark dedicated to evaluating PR-targeted training methods. 
+      PRBench empirically compares most common AT and PR-targeted training methods using a comprehensive set of metrics, including clean accuracy, PR and AR performance, training efficiency, and generalisation error (GE). 
+      We also provide theoretical analysis on the GE of PR performance across training methods. Main findings revealed by PRBench include: AT methods are more versatile than PR-targeted training methods in terms of improving both AR and PR performance, while PR-targeted training methods consistently yield lower GE and higher clean accuracy. Finally, we propose 
+      <a href="https://github.com/Kenneth939/Probabilistic-Robustness-for-Free-Revisiting-Its-Training-with-Benchmarking.github.io/blob/main/static/baseinfo/KL_PGD.pdf" target="_blank"><strong><em>KL-PGD</em></strong></a>, a simple yet effective method that achieves the highest overall ranking in PRBench.
+    </p>
+    <div class="text-center">
+      <img src="static/src/images/pic1.png" alt="Abstract Diagram" class="img-fluid rounded" style="width:80%; height:auto;" />
+    </div>
+  </div>
+  
+  <!-- Figures Section above Leaderboards -->
+  <div class="container mt-5" id="figures">
+    <div class="row gx-4 gy-0">
+      <div class="col-6 text-center">
+        <h3>Loss functions and AE generation strategies for AT and PR-targeted training methods</h3>
+        <img src="static/src/images/pic_loss_strategies.png"
+             alt="Loss functions and AE strategies"
+             class="img-fluid rounded figure-img" />
+      </div>
+      <div class="col-6 text-center">
+        <h3>Evaluation metrics of AR, PR, and GE</h3>
+        <img src="static/src/images/pic_eval_metrics.png"
+             alt="Evaluation metrics"
+             class="img-fluid rounded figure-img" />
+      </div>
+    </div>
+  </div>
+  
+ <!-- Available Leaderboards -->
+<div class="container mt-5" id="leaderboards">
+  <h1>Available Leaderboards</h1>
+
+  <p class="lead mt-4">
+    Comparison of standard training (ERM), corruption training using Uniform, Gaussian, 
+    and Laplace perturbations (PR-targeted method), and PGD training (standard AT) models 
+    in terms of clean accuracy (Acc.), PR(γ) and GEPR(γ=0.03) under various perturbation 
+    distributions (Uniform, Gaussian, Laplace).
+  </p>
+  <!-- three sets of buttons -->
+  <div id="filter-controls" class="mb-3">
+    <div class="mb-2">
+      <strong>Dataset: </strong>
+      <div id="dataset-buttons" class="btn-group" role="group"></div>
+    </div>
+    <div class="mb-2">
+      <strong>Model: </strong>
+      <div id="model-buttons" class="btn-group" role="group"></div>
+    </div>
+    <div class="mb-2">
+      <strong>Method: </strong>
+      <div id="method-buttons" class="btn-group" role="group"></div>
+    </div>
+  </div>
+
+  <!-- leaderboard table -->
+  <table id="leaderboard-table"
+         class="table table-striped table-bordered"
+         style="width:100%">
+    <thead>
+      <tr>
+            <th>Dataset</th>
+            <th>Model</th>
+            <th>Method</th>
+            <th>Acc.&nbsp;%</th>
+            <th>PR<sub>Uni.</sub>(0.03)%</th>
+            <th>PR<sub>Uni.</sub>(0.08)%</th>
+            <th>PR<sub>Uni.</sub>(0.10)%</th>
+            <th>PR<sub>Uni.</sub>(0.12)%</th>
+            <th>PR<sub>Gau.</sub>(0.03)%</th>
+            <th>PR<sub>Gau.</sub>(0.08)%</th>
+            <th>PR<sub>Gau.</sub>(0.10)%</th>
+            <th>PR<sub>Gau.</sub>(0.12)%</th>
+            <th>PR<sub>Lap.</sub>(0.03)%</th>
+            <th>PR<sub>Lap.</sub>(0.08)%</th>
+            <th>PR<sub>Lap.</sub>(0.10)%</th>
+            <th>PR<sub>Lap.</sub>(0.12)%</th>
+            <th>GE<sub>PR</sub><br>(Uni.)%</th>
+            <th>GE<sub>PR</sub><br>(Gau.)%</th>
+            <th>GE<sub>PR</sub><br>(Lap.)%</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+  <!-- Performance table introduction -->
+<div class="container">
+  <p class="lead mt-4">
+    Performance of AT and PR-targeted training methods across different datasets and models,
+    evaluated by clean accuracy (Acc.), AR (PGD/C&W/Auto-Attack), PR (PR(γ)/ProbAcc(ρ,γ=0.03)),
+    GEAR, GEPR(γ), and training time (s/epoch).
+  </p>
+</div>
+
+  <!-- Performance three sets of buttons -->
+  <div id="performance-filter-controls" class="mb-3">
+    <div class="mb-2">
+      <strong>Dataset: </strong>
+      <div id="performance-dataset-buttons" class="btn-group" role="group"></div>
+    </div>
+    <div class="mb-2">
+      <strong>Model: </strong>
+      <div id="performance-model-buttons" class="btn-group" role="group"></div>
+    </div>
+    <div class="mb-2">
+      <strong>Method: </strong>
+      <div id="performance-method-buttons" class="btn-group" role="group"></div>
+    </div>
+  </div>
+
+  <!-- Performance DataTable -->
+  <table id="performance-table"
+         class="table table-striped table-bordered"
+         style="width:100%">
+    <thead>
+      <tr>
+        <th>Dataset</th>
+        <th>Model</th>
+        <th>Method</th>
+        <th>Acc. %</th>
+        <th>PGD<sub>10</sub>%</th>
+        <th>PGD<sub>20</sub>%</th>
+        <th>CW<sub>20</sub>%</th>
+        <th>AA%</th>
+        <th>PR<br>(0.03)%</th>
+        <th>PR<br>(0.08)%</th>
+        <th>PR<br>(0.10)%</th>
+        <th>PR<br>(0.12)%</th>
+        <th>Prob<br>AccPR<br>(0.10)%</th>
+        <th>Prob<br>AccPR<br>(0.05)%</th>
+        <th>Prob<br>AccPR<br>(0.01)%</th>
+        <th>GE<sub>AR</sub> PGD<sub>20</sub>%</th>
+        <th>GE<sub>PR</sub><br>0.03%</th>
+        <th>GE<sub>PR</sub><br>0.08%</th>
+        <th>GE<sub>PR</sub><br>0.10%</th>
+        <th>GE<sub>PR</sub><br>0.12%</th>
+        <th>Time<br>s/ep</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <!-- —— dataset & model selection —— -->
+  <div class="container mt-5">
+    <h2 class="text-center">Select Dataset & Model</h2>
+    <div class="d-flex justify-content-center flex-wrap gap-3 my-3">
+      <div>
+        <strong>Dataset:</strong>
+        <div id="chart-ds-buttons" class="btn-group" role="group"></div>
+      </div>
+      <div>
+        <strong>Model:</strong>
+        <div id="chart-model-buttons" class="btn-group" role="group"></div>
+      </div>
+    </div>
+
+    <!-- line charts -->
+    <div id="chart-title" class="text-center mb-3 h4"></div>
+    <div id="chart-row">
+      <div class="chart-item">
+        <canvas id="chart-pr"></canvas>
+      </div>
+      <div class="chart-item">
+        <canvas id="chart-probacc"></canvas>
+      </div>
+      <div class="chart-item">
+        <canvas id="chart-gepr"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- Composite robustness summary -->
+  <div class="container mt-5" id="composite-summary">
+    <p class="lead text-center">
+      Composite robustness scores of different training methods, aggregated over all test datasets
+      and model architectures, with varying weight assignments for 7 metrics: clean accuracy (Acc.),
+      AR (PGD20), PR(γ), ProbAcc(ρ=0.05), GE<sub>AR</sub>(PGD20), GE<sub>PR</sub>(γ=0.08), and training time (s/ep.).
+    </p>
+    <div class="text-center">
+      <img
+        src="static/src/images/pic2.png"
+        alt="Composite robustness scores"
+        class="img-fluid rounded"
+        style="width:80%; height:auto;"
+      />
+    </div>
+  </div>
+  
+  <!-- Contribute -->
+  <div class="container" id="contribute">
+    <h1>Contribution</h1>
+    <p>welcome to make a contribution for PRBench!<br>
+       - submit Issue or Pull Request<br>
+       - share new Leaderboard images<br>
+       - update files or examples
+    </p>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> PRBench. Built with ❤️ and DataTables.</p>
+    </div>
+  </footer>
+  
+  <!-- JS depends：jQuery / DataTables -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script
+    src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js">
+  </script>
+  <script
+    src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js">
+  </script>
+
+  <!-- DataTables initialize -->
+  <script src="static/js/datatable-init.js"></script>
+  
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2"></script>
+  <script src="static/js/chart-init.js"></script>
+  <!-- JS -->
+  <script src="static/js/scroll.js"></script>
+</body>
+</html>
