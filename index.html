@@ -41,14 +41,14 @@
     <h1>Abstract</h1>
     <p>
       Deep learning models are notoriously vulnerable to imperceptible perturbations. Most existing research centers on 
-      <a href="https://github.com/Kenneth939/Probabilistic-Robustness-for-Free-Revisiting-Its-Training-with-Benchmarking.github.io/blob/main/static/baseinfo/AR.pdf" target="_blank"><strong>adversarial robustness (AR)</strong></a>, 
+      <strong>adversarial robustness (AR)</strong></a>, 
       which evaluates models under worst-case scenarios by examining the existence of deterministic 
-      <a href="https://github.com/Kenneth939/Probabilistic-Robustness-for-Free-Revisiting-Its-Training-with-Benchmarking.github.io/blob/main/static/baseinfo/AEs.pdf" target="_blank"><em>adversarial examples (AEs)</em></a>. 
-      In contrast, <a href="https://github.com/Kenneth939/Probabilistic-Robustness-for-Free-Revisiting-Its-Training-with-Benchmarking.github.io/blob/main/static/baseinfo/PR.pdf" target="_blank"><strong>probabilistic robustness (PR)</strong></a> adopts a statistical perspective, 
+      <em>adversarial examples (AEs)</em></a>. 
+      In contrast, <strong>probabilistic robustness (PR)</strong></a> adopts a statistical perspective, 
       measuring the likelihood of encountering AEs under stochastic perturbations.
     </p>
     <p>While PR is widely regarded as a practical complement to AR, training methods specifically designed to improve PR remain underdeveloped compared to 
-      <a href="https://github.com/Kenneth939/Probabilistic-Robustness-for-Free-Revisiting-Its-Training-with-Benchmarking.github.io/blob/main/static/baseinfo/AT.pdf" target="_blank"><em>adversarial training (AT)</em></a> for AR. 
+      <em>adversarial training (AT)</em></a> for AR. 
       Among the few PR-targeted training methods, we identify some key limitations:
     </p>
     <ul class="abstract-points">
@@ -57,10 +57,10 @@
       <li><strong><em>iii)</em></strong> There is no unified theoretical framework for comparing the generalisability of those training methods.</li>
     </ul>
     <p>
-      Thus, we introduce <a href="https://github.com/Kenneth939/Probabilistic-Robustness-for-Free-Revisiting-Its-Training-with-Benchmarking.github.io/blob/main/static/baseinfo/PRBench.pdf" target="_blank"><strong>PRBench</strong></a>, the first benchmark dedicated to evaluating PR-targeted training methods. 
+      Thus, we introduce <strong>PRBench</strong></a>, the first benchmark dedicated to evaluating PR-targeted training methods. 
       PRBench empirically compares most common AT and PR-targeted training methods using a comprehensive set of metrics, including clean accuracy, PR and AR performance, training efficiency, and generalisation error (GE). 
       We also provide theoretical analysis on the GE of PR performance across training methods. Main findings revealed by PRBench include: AT methods are more versatile than PR-targeted training methods in terms of improving both AR and PR performance, while PR-targeted training methods consistently yield lower GE and higher clean accuracy. Finally, we propose 
-      <a href="https://github.com/Kenneth939/Probabilistic-Robustness-for-Free-Revisiting-Its-Training-with-Benchmarking.github.io/blob/main/static/baseinfo/KL_PGD.pdf" target="_blank"><strong><em>KL-PGD</em></strong></a>, a simple yet effective method that achieves the highest overall ranking in PRBench.
+      <strong><em>KL-PGD</em></strong></a>, a simple yet effective method that achieves the highest overall ranking in PRBench.
     </p>
     <div class="text-center">
       <img src="static/src/images/fig_wcr_pr.jpg" alt="Abstract Diagram" class="img-fluid rounded" style="width:80%; height:auto;" />
