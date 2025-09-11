@@ -42,8 +42,8 @@ body {
 
 .container {
     max-width: 100%;    /* 原来 1000px 改为 100% */
-    padding-left: 0.5px;
-    padding-right: 0.5px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin-left: auto;
     margin-right: auto;
 }
