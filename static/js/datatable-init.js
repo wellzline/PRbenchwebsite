@@ -111,7 +111,6 @@ $(function() {
   // ==== Performance Table ====
   $('#performance-table').DataTable({
     // global search: smart + fuzzy
-    scrollX: true, 
     search: {
       regex: false,
       smart: true
