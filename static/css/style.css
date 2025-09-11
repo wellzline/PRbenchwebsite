@@ -23,11 +23,20 @@ body {
 }
 
 /* The global container spans the entire screen with minimal left and right padding */
-.container {
+/* .container {
   max-width: 100% !important;
   padding: 0.5rem 0.5rem !important;
   margin: 0 auto;
+} */
+
+.container {
+    max-width: 1000px;   /* 限制宽度，内容不铺满屏幕 */
+    padding-left: 20px;  /* 左右留白 */
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 
 /* The title is centered */
 h1, h2, h3 {
