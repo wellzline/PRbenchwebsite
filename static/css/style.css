@@ -41,20 +41,21 @@ body {
 } */
 
 .container {
-    max-width: 1200px;    /* 原来 1000px 改为 100% */
+    max-width: 1150px;    /* 原来 1000px 改为 100% */
     padding-left: 5px;
     padding-right: 5px;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* .performance-table-wrapper {
-  width: 100%;          
-  max-width: 100%;      
-  margin: 0 auto;
-  padding-left: 20px;   
-  padding-right: 20px;
-} */
+/* Performance 表格单独宽度控制 */
+.performance-table-wrapper {
+  max-width: 1500px;    /* 比 container 大一点 */
+  margin: 0 auto;       /* 居中 */
+  padding-left: 1px;   /* 左右留白，可以调小 */
+  padding-right: 1px;
+}
+
 
 
 /* The title is centered */
