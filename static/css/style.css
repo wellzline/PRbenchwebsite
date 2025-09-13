@@ -48,14 +48,14 @@ body {
     margin-right: auto;
 }
 
-/* Performance 表格容器 */
 .performance-table-wrapper {
-  max-width: 2000px;   /* 单独放宽 */
-  margin: 0 auto;      /* 水平居中 */
-  padding-left: 1px;   /* 两侧留白 */
-  padding-right: 1px;
-  overflow-x: auto;    /* 避免小屏幕溢出，加横向滚动 */
+  width: 100%;          /* 占满屏幕 */
+  max-width: 100%;      /* 不限制 */
+  margin: 0 auto;
+  padding-left: 20px;   /* 留一点点左右空隙 */
+  padding-right: 20px;
 }
+
 
 /* The title is centered */
 h1, h2 {
