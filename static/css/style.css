@@ -50,16 +50,16 @@ body {
 
 /* Performance 表格单独宽度控制 */
 .performance-table-wrapper {
-  max-width: 1190px;    /* 比 container 大一点 */
+  max-width: 1200px;    /* 比 container 大一点 */
   margin: 0 auto;       /* 居中 */
-  padding-left: 5px;   /* 左右留白，可以调小 */
-  padding-right: 5px;
+  padding-left: 10px;   /* 左右留白，可以调小 */
+  padding-right: 10px;
 }
 
 
 /* Performance 表格单独宽度控制 */
 .performance-wrapper {
-  max-width: 1170px;    /* 比 container 大一点 */
+  max-width: 1180px;    /* 比 container 大一点 */
   margin: 0 auto;       /* 居中 */
   padding-left: 5px;   /* 左右留白，可以调小 */
   padding-right: 5px;
