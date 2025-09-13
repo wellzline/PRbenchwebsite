@@ -52,8 +52,8 @@ body {
 .abstract-wrapper {
   max-width: 1100px;   /* 比 container (1100px) 窄一点 */
   margin: 0 auto;     /* 居中 */
-  padding-left: 10px; /* 留白 */
-  padding-right: 10px;
+  padding-left: 15px; /* 留白 */
+  padding-right: 15px;
 }
 
 
