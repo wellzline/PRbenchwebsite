@@ -42,15 +42,15 @@ body {
 
 .container {
     max-width: 1200px;    /* 原来 1000px 改为 100% */
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
     margin-left: auto;
     margin-right: auto;
 }
 
 /* 单独控制 Abstract 宽度 */
 .abstract-wrapper {
-  max-width: 1080px;   /* 比 container (1100px) 窄一点 */
+  max-width: 1050px;   /* 比 container (1100px) 窄一点 */
   margin: 0 auto;     /* 居中 */
   padding-left: 15px; /* 留白 */
   padding-right: 15px;
