@@ -50,7 +50,7 @@ body {
 
 /* Performance 表格容器 */
 .performance-table-wrapper {
-  max-width: 1500px;   /* 单独放宽 */
+  max-width: 1800px;   /* 单独放宽 */
   margin: 0 auto;      /* 水平居中 */
   padding-left: 1px;   /* 两侧留白 */
   padding-right: 1px;
