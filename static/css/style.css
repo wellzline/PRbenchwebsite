@@ -50,12 +50,14 @@ body {
 
 /* Performance 表格容器 */
 .performance-table-wrapper {
-  max-width: 1300px;   /* 单独放宽 */
-  margin: 0 auto;      /* 水平居中 */
-  padding-left: 5px;   /* 两侧留白 */
-  padding-right: 5px;
-  overflow-x: auto;    /* 避免小屏幕溢出，加横向滚动 */
+  max-width: 1500px;   /* 比 container (1100px) 宽，但不是全屏 */
+  width: 90%;          /* 占页面 90%，保证居中效果 */
+  margin: 0 auto;      /* 居中 */
+  padding-left: 10px;
+  padding-right: 10px;
+  overflow-x: auto;    /* 如果屏幕太窄，允许横向滚动 */
 }
+
 
 /* The title is centered */
 h1, h2 {
