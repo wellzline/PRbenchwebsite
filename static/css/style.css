@@ -50,7 +50,7 @@ body {
 
 /* 单独控制 Abstract 宽度 */
 .abstract-wrapper {
-  max-width: 1050px;   /* 比 container (1100px) 窄一点 */
+  max-width: 1080px;   /* 比 container (1100px) 窄一点 */
   margin: 0 auto;     /* 居中 */
   padding-left: 15px; /* 留白 */
   padding-right: 15px;
