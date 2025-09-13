@@ -48,26 +48,14 @@ body {
     margin-right: auto;
 }
 
-
-
-/* Performance 表格单独宽度控制 */
-.performance-wrapper {
-  max-width: 1180px;    /* 比 container 大一点 */
-  margin: 0 auto;       /* 居中 */
-  padding-left: 1px;   /* 左右留白，可以调小 */
-  padding-right: 1px;
-}
-
-
-
-/* Performance 表格单独宽度控制 */
+/* Performance 表格容器 */
 .performance-table-wrapper {
-  max-width: 1200px;    /* 比 container 大一点 */
-  margin: 0 auto;       /* 居中 */
-  padding-left: 1px;   /* 左右留白，可以调小 */
-  padding-right: 1px;
+  max-width: 1200px;   /* 单独放宽 */
+  margin: 0 auto;      /* 水平居中 */
+  padding-left: 5px;   /* 两侧留白 */
+  padding-right: 5px;
+  overflow-x: auto;    /* 避免小屏幕溢出，加横向滚动 */
 }
-
 
 /* The title is centered */
 h1, h2 {
