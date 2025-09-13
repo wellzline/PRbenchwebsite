@@ -48,13 +48,13 @@ body {
     margin-right: auto;
 }
 
-.performance-table-wrapper {
-  width: 100%;          /* 占满屏幕 */
-  max-width: 100%;      /* 不限制 */
+/* .performance-table-wrapper {
+  width: 100%;          
+  max-width: 100%;      
   margin: 0 auto;
-  padding-left: 20px;   /* 留一点点左右空隙 */
+  padding-left: 20px;   
   padding-right: 20px;
-}
+} */
 
 
 /* The title is centered */
