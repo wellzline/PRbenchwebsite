@@ -49,10 +49,10 @@ $(function() {
       { data: null, render: d => d.ge.lap }                  // 18
     ],
 
-    order: [],    // 保持 JSON 原始顺序
+    order: [],    
     pageLength: 25,
 
-    // ==== 根据 method 给每行打 class，以便着色 ====
+
     rowCallback: function(row, data) {
       $(row).removeClass('row-emr row-ar row-pr');
       if (data.method === 'ERM') {

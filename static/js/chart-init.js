@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
           RHO_LEVELS, dsProb, 'ProbAcc(ρ,γ=0.03)%','Perturbation Radius ρ'
         )));
         charts.push(new Chart(ctxGEPR, makeConfig(
-          GAMMAS, dsGEPR, 'GEₚᵣ(γ)%',          'Perturbation Radius γ'
+          GAMMAS, dsGEPR, 'GE of PR(γ)%',          'Perturbation Radius γ'
         )));
       });
 
