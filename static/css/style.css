@@ -22,15 +22,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* The global container spans the entire screen with minimal left and right padding */
-/* .container {
-  max-width: 100% !important;
-  padding: 0.5rem 0.5rem !important;
-  margin: 0 auto;
-} */
-
-
-/* revise */
 
 
 .container {
@@ -369,14 +360,7 @@ nav {
 }
 
 
-/* Abstract beautify */
-/* #abstract p {
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  line-height: 1.6;
-} */
 
-/* revise */
 
 #abstract p, #abstract li {
     font-size: 1.1rem;
